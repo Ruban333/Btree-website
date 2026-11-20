@@ -1,0 +1,40 @@
+name: Security
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  schedule:
+    - cron: "0 3 * * 1" # weekly, so new advisories are caught even when nobody pushes
+
+permissions:
+  contents: read
+
+jobs:
+  dependencies:
+    name: Dependency audit, lint, types
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run security:audit # fails on high or critical advisories in production dependencies
+      - run: npm run lint
+      - run: npx tsc --noEmit
+      - run: npm run course:check
+
+  codeql:
+    name: CodeQL (static analysis)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: github/codeql-action/init@v3
+        with:
+          languages: javascript-typescript
+      - uses: github/codeql-action/analyze@v3

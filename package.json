@@ -3,15 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "check:placeholders": "node scripts/check-placeholders.mjs",
+    "prebuild": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-courses.mjs && node scripts/check-placeholders.mjs",
+    "course:new": "node scripts/new-course.mjs",
+    "course:check": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-courses.mjs",
+    "course:import": "node scripts/import-course-design.mjs",
+    "course:compare": "node scripts/compare-design.mjs",
+    "security:audit": "npm audit --omit=dev --audit-level=high",
+    "security:check": "npm run lint && npm run security:audit"
   },
   "dependencies": {
     "next": "16.4.6",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "schema-dts": "^2.1.0",
+    "server-only": "^0.0.1",
+    "sharp": "^0.35.5",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -19,6 +31,11 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.6",
+    "eslint-plugin-security": "^4.2.1",
+    "htmlparser2": "^9.1.0",
     "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=20.9.0"
   }
 }

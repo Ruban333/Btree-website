@@ -1,0 +1,38 @@
+/* Page-specific rules lifted from the design canvas. */
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:0;row-gap:24px}
+.facts div{padding:4px 24px;border-left:1px solid #e3e8f2}
+.facts div:nth-child(4n+1){border-left:0;padding-left:0}
+.facts dt{font-size:13.5px;color:#5b6478;font-weight:500}
+.facts dd{margin:4px 0 0;font-weight:700;font-size:17px}
+.pipe{display:flex;flex-wrap:wrap;gap:8px;align-items:stretch}
+.pipe li{flex:1 1 120px;background:#ffffff;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:4px}
+.pipe b{font-size:15px}
+.pipe span{font-size:13px;color:#5b6478}
+@media (max-width:900px){.facts{grid-template-columns:repeat(2,minmax(0,1fr))}.facts div:nth-child(odd){border-left:0;padding-left:0}}
+.prose{font-size:17px;line-height:1.75;color:#0b1026}
+.prose h2{font-size:26px;line-height:1.25;letter-spacing:-.02em;font-weight:700;margin:56px 0 14px;scroll-margin-top:96px}
+.prose h3{font-size:19px;line-height:1.35;font-weight:600;margin:28px 0 8px}
+.prose p{margin:0 0 18px}
+.prose ul,.prose ol{margin:0 0 18px;padding-left:22px;display:grid;gap:6px}
+.prose a{color:#0000ff;text-decoration:underline;text-underline-offset:3px}
+.prose table{width:100%;border-collapse:collapse;font-size:15.5px;margin:0 0 22px}
+.prose th,.prose td{text-align:left;padding:12px 14px;border-bottom:1px solid #e3e8f2;vertical-align:top}
+.prose th{font-size:13.5px;color:#5b6478;font-weight:600}
+.toc{position:sticky;top:96px}
+.toc a{display:block;padding:7px 0;color:#5b6478;font-size:14.5px;font-weight:500;line-height:1.4}
+.toc a:hover,.toc a.on{color:#0000ff}
+.postrow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:baseline;padding:22px 0;border-top:1px solid #e3e8f2}
+.postrow:hover h3{color:#0000ff}
+.hours{width:100%;border-collapse:collapse;font-size:15.5px}
+.hours td{padding:10px 0;border-bottom:1px solid #e3e8f2}
+.hours td:last-child{text-align:right;font-weight:600}
+
+/* Responsive additions */
+@media (max-width:480px){.facts{grid-template-columns:minmax(0,1fr)}.facts div{border-left:0;padding-left:0}}
+@media (max-width:600px){
+  .postrow{grid-template-columns:minmax(0,1fr);gap:8px;padding:18px 0}
+  .prose{font-size:16.5px;line-height:1.7}
+  .prose h2{font-size:23px;margin-top:40px}
+  .prose table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+}
+@media (max-width:1040px){.toc{position:static}}

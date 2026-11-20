@@ -1,0 +1,38 @@
+{
+  "_comment": "Maps design-canvas file names (links inside the designs) to real site routes, and course design files to course slugs. Edit when a page or URL changes.",
+  "routes": {
+    "Main.dc.html": "/",
+    "Courses.dc.html": "/courses",
+    "Blog.dc.html": "/blog",
+    "Blog-Clean.dc.html": "/blog",
+    "Blog-Track.dc.html": "/blog/category/cloud-devops",
+    "Blog-Article.dc.html": "/blog/career-with-aws-devops-certification",
+    "Blog-Interview.dc.html": "/blog/interview/full-stack-developer-interview-questions",
+    "About.dc.html": "/about-us",
+    "Corporate.dc.html": "/corporate-training",
+    "Instructor.dc.html": "/become-an-instructor",
+    "Job-Portal.dc.html": "/placement-job-portal",
+    "Contact.dc.html": "/contact",
+    "Terms.dc.html": "/terms-of-use",
+    "Privacy.dc.html": "/privacy-policy",
+    "Disclaimer.dc.html": "/disclaimer"
+  },
+  "courses": {
+    "Course-Detail": "aws-devops-course-chennai",
+    "Course-Detail-Midnight": "aws-devops-course-chennai",
+    "Course-AWS": "aws-training-chennai",
+    "Course-CCNA-CCNP": "ccna-ccnp",
+    "Course-Cybersecurity": "cyber-security",
+    "Course-Azure-DevOps": "azure-devops",
+    "Course-AWS-Data-Engineering": "aws-data-engineering",
+    "Course-Azure-Data-Engineering": "azure-data-engineering",
+    "Course-GCP-Data-Engineering": "gcp-data-engineering",
+    "Course-Power-Automate": "power-automate",
+    "Course-Data-Analytics": "data-analytics",
+    "Course-Generative-AI": "generative-ai",
+    "Course-Playwright": "playwright-automation",
+    "Course-Power-BI": "power-bi",
+    "Course-Salesforce": "salesforce",
+    "Course-UI-UX": "ui-ux-design"
+  }
+}

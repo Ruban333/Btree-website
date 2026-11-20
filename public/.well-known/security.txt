@@ -1,0 +1,6 @@
+# Security contact for BTree Systems (RFC 9116)
+# Found a vulnerability? Please email us before sharing it publicly.
+Contact: mailto:info@btreesystems.com
+Expires: 2027-11-19T00:00:00.000Z
+Preferred-Languages: en, ta
+Canonical: https://www.btreesystems.com/.well-known/security.txt
