@@ -23,24 +23,8 @@ const course: CoursePage = {
     title: "How long is the CCNA and CCNP course?",
     lead: "The combined course takes **4 months, about 150 hours** of live classes and Cisco labs: roughly 2 months for CCNA and 2 months for CCNP Enterprise. You can also join the CCNA part on its own.",
     batches: [
-      {
-        name: "Weekday batch",
-        duration: "4 months",
-        schedule: ["Monday to Friday", "2 hours a day"],
-        note: "For freshers or full-time learners",
-      },
-      {
-        name: "Weekend batch",
-        duration: "5 months",
-        schedule: ["Saturday and Sunday", "4 hours a day"],
-        note: "Fits around a support or NOC job",
-      },
-      {
-        name: "CCNA only",
-        duration: "2 months",
-        schedule: ["Weekday or weekend", "batches"],
-        note: "Start with the associate level",
-      },
+      { name: "Duration", duration: "4 months" },
+      { name: "Hours of learning", duration: "150 hours" },
     ],
   },
   whatis: {
@@ -356,7 +340,7 @@ const course: CoursePage = {
       },
       {
         q: "How long does it take to complete CCNA and CCNP?",
-        a: "About 2 months for CCNA and 2 more months for CCNP Enterprise on weekday batches, or about 5 months in total on weekends. Most learners book the CCNA exam at the end of month 2 and the ENCOR exam after the course.",
+        a: "About 2 months for CCNA and 2 more months for CCNP Enterprise in total, about 150 hours. Most learners book the CCNA exam at the end of month 2 and the ENCOR exam after the course.",
       },
       {
         q: "Is the CCNA exam changing in 2027?",

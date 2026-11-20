@@ -23,27 +23,10 @@ const course: CoursePage = {
   },
   glance: {
     title: "How long is the UI/UX design course in Chennai?",
-    lead: "The UI/UX course runs about **120+ hours over [X] months**. You can join a batch that fits your schedule.",
-    columns: 3,
+    lead: "The UI/UX course runs about **120+ hours over [X] months**.",
     batches: [
-      {
-        name: "Weekday batch",
-        duration: "[X] months",
-        schedule: ["[timings]"],
-        note: "For freshers or full-time learners",
-      },
-      {
-        name: "Weekend batch",
-        duration: "[X] months",
-        schedule: ["Saturday and Sunday", "8:00–11:00 PM IST"],
-        note: "Fits around a full-time job",
-      },
-      {
-        name: "Fast-track batch",
-        duration: "[X] months",
-        schedule: ["[timings]"],
-        note: "For learners who want to finish sooner",
-      },
+      { name: "Duration", duration: "[X months]" },
+      { name: "Hours of learning", duration: "120+ hours" },
     ],
   },
   whatis: {

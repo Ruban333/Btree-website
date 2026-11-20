@@ -10,8 +10,19 @@ import { BAD_USER_AGENTS, PROBE_PATHS, isSameOrigin } from "@/lib/security";
  *
  * The proxy keeps no state (it may run on a CDN edge). Rate limiting lives in the API route, see lib/rate-limit.ts.
  */
+/**
+ * WordPress-era parameter URLs that Google indexed (e.g. https://btreesystems.com/?taxonomy&term). They are duplicates of
+ * the home page, so they get a permanent redirect to the clean URL. This lives here, not in next.config redirects,
+ * because config redirects keep the query string and would redirect to themselves forever.
+ */
+const LEGACY_PARAMS = ["taxonomy", "term", "s"];
+
 export function proxy(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+  const { pathname, searchParams } = request.nextUrl;
+
+  if (pathname === "/" && LEGACY_PARAMS.some((k) => searchParams.has(k))) {
+    return NextResponse.redirect(new URL("/", request.url), 301);
+  }
 
   if (PROBE_PATHS.test(pathname)) {
     return new NextResponse("Not found", { status: 404, headers: { "Cache-Control": "public, max-age=3600" } });

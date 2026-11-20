@@ -3,19 +3,14 @@ import { LEGACY_REDIRECTS } from "./src/data/redirects";
 import { SITE_URL } from "./src/lib/site";
 import { apiHeaders, securityHeaders } from "./src/lib/security-headers";
 
-// One canonical host: if the site lives at www.example.com, requests to example.com are 301'd to it. Without this,
-// search engines can index both hosts as duplicates and split link equity. Only active in production.
+// One canonical host. The live site is https://btreesystems.com (no www) and already 301s www to it, so the new site
+// must keep exactly that. The OTHER host variant is 301'd to SITE_URL (production only); without this, search engines
+// index both hosts as duplicates and split link equity. If you ever switch to www, only NEXT_PUBLIC_SITE_URL changes.
 const siteHost = new URL(SITE_URL).host;
+const otherHost = siteHost.startsWith("www.") ? siteHost.slice(4) : `www.${siteHost}`;
 const canonicalHostRedirects =
-  process.env.NODE_ENV === "production" && siteHost.startsWith("www.")
-    ? [
-        {
-          source: "/:path*",
-          has: [{ type: "host" as const, value: siteHost.replace(/^www\./, "") }],
-          destination: `${SITE_URL}/:path*`,
-          permanent: true,
-        },
-      ]
+  process.env.NODE_ENV === "production"
+    ? [{ source: "/:path*", has: [{ type: "host" as const, value: otherHost }], destination: `${SITE_URL}/:path*`, permanent: true }]
     : [];
 
 const nextConfig: NextConfig = {

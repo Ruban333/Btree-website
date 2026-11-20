@@ -2,7 +2,7 @@
  * Single source of truth for site-wide SEO facts.
  * Set NEXT_PUBLIC_SITE_URL in production (no trailing slash).
  */
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.btreesystems.com").replace(/\/$/, "");
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://btreesystems.com").replace(/\/$/, "");
 
 export const SITE = {
   name: "BTree Systems",

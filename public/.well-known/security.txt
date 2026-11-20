@@ -3,4 +3,4 @@
 Contact: mailto:info@btreesystems.com
 Expires: 2027-11-19T00:00:00.000Z
 Preferred-Languages: en, ta
-Canonical: https://www.btreesystems.com/.well-known/security.txt
+Canonical: https://btreesystems.com/.well-known/security.txt

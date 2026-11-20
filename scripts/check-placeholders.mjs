@@ -9,7 +9,7 @@ const EXT = /\.(tsx|ts)$/;
 // A placeholder is "[some words]" that is not an array index, a type, or a code construct.
 const PLACEHOLDER = /(?<![\w\])"'`])\[(?=[^\]]*[A-Za-z0-9₹])[^\]\[<>{}"'`=;()\\^]{1,70}\](?![\w(\[])/g;
 const IGNORE_LINE =
-  /^\s*(\/\/|\*|\/\*)|:\s*\[|=\s*\[|\bas\s|\]\[\]|import\s|\bconst \[|=>\s*\[|\(\(?\[|^\s*\[[A-Za-z_]\w*(, ?[A-Za-z_]\w*)+\],?\s*$/;
+  /^\s*(\/\/|\*|\/\*)|:\s*\[|=\s*\[|\bas\s|\]\[\]|import\s|\bconst \[|=>\s*\[|\},\s*\[|\(\(?\[|^\s*\[[A-Za-z_]\w*(, ?[A-Za-z_]\w*)+\],?\s*$/;
 // Whole-string placeholders in data files, e.g. next: "[date]".
 const QUOTED = /["'`](\[[^\]"'`\n]{1,70}\])["'`]/g;
 

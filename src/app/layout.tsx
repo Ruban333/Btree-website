@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={jakarta.variable}>
+    <html lang="en-IN" className={jakarta.variable}>
       <body suppressHydrationWarning>
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <div className="pg t-light" style={{ ["--sans" as string]: "var(--font-jakarta), system-ui, sans-serif" }}>

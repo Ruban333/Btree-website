@@ -21,20 +21,10 @@ const course: CoursePage = {
   },
   glance: {
     title: "How long is the AWS DevOps course?",
-    lead: "The AWS DevOps course takes **4 months, about 160 hours** of live classes and hands-on labs. Choose the batch that fits your schedule; every batch covers the same syllabus and projects.",
+    lead: "The AWS DevOps course takes **4 months, about 160 hours** of live classes and hands-on labs.",
     batches: [
-      {
-        name: "Weekday/Weekend batch",
-        duration: "5 months",
-        schedule: ["Saturday and Sunday", "4 hours a day"],
-        note: "Fits around a full-time job",
-      },
-      {
-        name: "Fast-track batch",
-        duration: "3 months",
-        schedule: ["Monday to Friday", "3 hours a day"],
-        note: "For learners who want to finish sooner",
-      },
+      { name: "Duration", duration: "4 months" },
+      { name: "Hours of learning", duration: "160 hours" },
     ],
   },
   whatis: {
@@ -333,7 +323,7 @@ const course: CoursePage = {
       },
       {
         q: "How long does it take to learn AWS DevOps?",
-        a: "The BTree AWS DevOps course takes 4 months on weekdays or about 5 months on weekends. Most learners are ready for junior DevOps or cloud engineer interviews by the end, having built 3 end-to-end projects and practised scenario questions in mock interviews.",
+        a: "The BTree AWS DevOps course takes 4 months, about 160 hours of live classes and labs. Most learners are ready for junior DevOps or cloud engineer interviews by the end, having built 3 end-to-end projects and practised scenario questions in mock interviews.",
       },
       {
         q: "Can a fresher or non-IT graduate learn AWS DevOps?",

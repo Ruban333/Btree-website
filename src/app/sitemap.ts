@@ -24,11 +24,13 @@ const ROUTES: { path: string; priority: number; changeFrequency: "daily" | "week
   ...ALL_COURSES.map((c) => ({ path: `/courses/${c.slug}`, priority: 0.8, changeFrequency: "monthly" as const })),
 ];
 
+/**
+ * No lastModified on purpose: stamping every URL with "now" teaches Google to ignore the field. Add a real date per
+ * page once the CMS provides one (Wagtail exposes last_published_at).
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
   return ROUTES.map((r) => ({
     url: absoluteUrl(r.path),
-    lastModified,
     changeFrequency: r.changeFrequency,
     priority: r.priority,
   }));

@@ -21,26 +21,10 @@ const course: CoursePage = {
   },
   glance: {
     title: "How long is the Azure DevOps course?",
-    lead: "The Azure DevOps course takes **3 months, about 120 hours** of live classes and labs. Every batch covers the same syllabus and projects.",
+    lead: "The Azure DevOps course takes **3 months, about 120 hours** of live classes and labs.",
     batches: [
-      {
-        name: "Weekday batch",
-        duration: "3 months",
-        schedule: ["Monday to Friday", "2 hours a day"],
-        note: "For freshers or full-time learners",
-      },
-      {
-        name: "Weekend batch",
-        duration: "4 months",
-        schedule: ["Saturday and Sunday", "4 hours a day"],
-        note: "Fits around a full-time job",
-      },
-      {
-        name: "Fast-track batch",
-        duration: "2 months",
-        schedule: ["Monday to Friday", "3 hours a day"],
-        note: "For developers and admins",
-      },
+      { name: "Duration", duration: "3 months" },
+      { name: "Hours of learning", duration: "120 hours" },
     ],
   },
   whatis: {
@@ -359,7 +343,7 @@ const course: CoursePage = {
       },
       {
         q: "How long does it take to learn Azure DevOps?",
-        a: "The BTree course takes 3 months on weekdays, 4 months on weekends or 2 months on the fast-track batch.",
+        a: "The BTree course takes 3 months, about 120 hours of live classes and labs.",
       },
       {
         q: "What is the salary of an Azure DevOps engineer in Chennai?",
