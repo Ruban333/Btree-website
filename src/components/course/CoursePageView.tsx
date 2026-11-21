@@ -478,7 +478,14 @@ export default function CoursePageView({ c }: { c: CoursePage }) {
               <thead>
                 <tr>
                   <th scope="col">Role</th>
-                  <th scope="col">Starting salary in Chennai</th>
+                  {c.jobs.roles.some((r) => r.experienced) ? (
+                    <>
+                      <th scope="col">Market average (0–4 years)</th>
+                      <th scope="col">Experienced (5+ years)</th>
+                    </>
+                  ) : (
+                    <th scope="col">Starting salary in Chennai</th>
+                  )}
                   <th scope="col">Typical employers</th>
                 </tr>
               </thead>
@@ -489,6 +496,7 @@ export default function CoursePageView({ c }: { c: CoursePage }) {
                       <b>{r.role}</b>
                     </td>
                     <td>{r.salary}</td>
+                    {c.jobs.roles.some((x) => x.experienced) && <td>{r.experienced}</td>}
                     <td>{r.employers}</td>
                   </tr>
                 ))}

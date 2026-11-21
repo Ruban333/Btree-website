@@ -115,10 +115,6 @@ export default async function CoursePage({ params }: Props) {
                 <td>{course.mode}</td>
               </tr>
               <tr>
-                <th scope="row">Level</th>
-                <td>{course.level}</td>
-              </tr>
-              <tr>
                 <th scope="row">What you learn</th>
                 <td>{course.out}</td>
               </tr>

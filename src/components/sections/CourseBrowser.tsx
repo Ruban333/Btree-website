@@ -30,12 +30,27 @@ export default function CourseBrowser() {
 
   return (
     <>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 16, flexWrap: "wrap", marginBottom: 32 }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          gap: 16,
+          flexWrap: "wrap",
+          marginBottom: 32,
+        }}
+      >
         <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }} role="group" aria-label="Filter by track">
           {CATEGORIES.map((c) => {
             const n = c.id === "all" ? ALL_COURSES.length : ALL_COURSES.filter((x) => x.cat === c.id).length;
             return (
-              <button key={c.id} type="button" className={cat === c.id ? "chip on" : "chip"} aria-pressed={cat === c.id} onClick={() => setCat(c.id)}>
+              <button
+                key={c.id}
+                type="button"
+                className={cat === c.id ? "chip on" : "chip"}
+                aria-pressed={cat === c.id}
+                onClick={() => setCat(c.id)}
+              >
                 {c.label} <small>{n}</small>
               </button>
             );
@@ -48,28 +63,42 @@ export default function CourseBrowser() {
 
       <div className="g3">
         {shown.map((c) => (
-          <Link key={c.slug} className="card card--line course" href={`/courses/${c.slug}`} style={{ overflow: "hidden" }}>
+          <Link
+            key={c.slug}
+            className="card card--line course"
+            href={`/courses/${c.slug}`}
+            style={{ overflow: "hidden" }}
+          >
             <Photo
               src={courseImage(c.cat, c.slug)}
               alt={`${c.name} course at BTree Systems, Chennai`}
               sizes="(min-width: 900px) 33vw, 100vw"
-              style={{ aspectRatio: "1000 / 714", background: "#0a1733", width: "calc(100% + 48px)", maxWidth: "none", margin: "-24px -24px 4px", borderRadius: "16px 16px 0 0" }}
+              style={{
+                aspectRatio: "1000 / 714",
+                background: "#0a1733",
+                width: "calc(100% + 48px)",
+                maxWidth: "none",
+                margin: "-24px -24px 4px",
+                borderRadius: "16px 16px 0 0",
+              }}
             />
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               <span className="ic">{c.code}</span>
-              <span className={c.badge ? "tag" : "tag tag--n"}>{c.badge ?? c.level}</span>
+              {c.badge && <span className="tag">{c.badge}</span>}
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
               <h3 className="t-h3">{c.name}</h3>
               <p className="t-small muted">{c.out}</p>
             </div>
             <div className="meta">
-              <span>{c.dur}</span>
-              <span>{c.mode}</span>
-              <span>{c.level}</span>
+              <span className="pill pill--brand">{c.dur}</span>
+              {c.mode.split(" · ").map((m) => (
+                <span key={m} className="pill">
+                  {m}
+                </span>
+              ))}
             </div>
             <div className="foot">
-              <span className="muted">Next batch [date]</span>
               <span className="lnk">View course</span>
             </div>
           </Link>

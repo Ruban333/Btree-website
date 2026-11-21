@@ -25,7 +25,14 @@ export default function PopularCourses() {
                 src={courseImage(c.cat, c.slug)}
                 alt={`${c.name} course at BTree Systems, Chennai`}
                 sizes="(min-width: 900px) 33vw, 100vw"
-                style={{ aspectRatio: "1000 / 714", background: "#0a1733", width: "calc(100% + 48px)", maxWidth: "none", margin: "-24px -24px 4px", borderRadius: "16px 16px 0 0" }}
+                style={{
+                  aspectRatio: "1000 / 714",
+                  background: "#0a1733",
+                  width: "calc(100% + 48px)",
+                  maxWidth: "none",
+                  margin: "-24px -24px 4px",
+                  borderRadius: "16px 16px 0 0",
+                }}
               />
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <span className="ic">{c.code}</span>
@@ -36,11 +43,14 @@ export default function PopularCourses() {
                 <p className="t-small muted">{c.out}</p>
               </div>
               <div className="meta">
-                <span>{c.dur}</span>
-                <span>{c.mode}</span>
+                <span className="pill pill--brand">{c.dur}</span>
+                {c.mode.split(" · ").map((m) => (
+                  <span key={m} className="pill">
+                    {m}
+                  </span>
+                ))}
               </div>
               <div className="foot">
-                <span className="muted">Next batch {c.next}</span>
                 <span className="lnk">View course</span>
               </div>
             </Link>
