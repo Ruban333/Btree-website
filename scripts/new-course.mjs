@@ -36,6 +36,7 @@ const faqs = [
   [`Can a fresher or non-IT graduate learn ${name}?`, `${P("Yes or no, then who it suits and what is taught from scratch. 40 to 60 words, answer first")}.`],
   [`What is the salary of a ${name} professional in Chennai?`, `Entry-level ${name} roles in Chennai typically pay ₹${P("X–Y")} LPA, rising to ₹${P("X–Y")} LPA with 3–5 years of experience (${P("source, year")}).`],
   [`Does the ${name} course prepare me for certification?`, `${P("Exam names and what is covered")}.`],
+  [`Will I get a certificate after the ${name} course?`, `Receive a BTree ${name} Course Completion Certificate issued by BTree Systems, Chennai, upon successfully completing all course requirements, making it a valuable addition to your resume and Social profiles.`],
   [`Will I get placement support after the ${name} course?`, `Yes. Placement support includes resume and LinkedIn reviews, mock interviews with feedback, and referrals to BTree hiring partners. It continues after the course ends, until you are placed.`],
 ];
 const item = (t) => ({ title: P(t), text: P("One sentence") });
@@ -89,10 +90,10 @@ const data = {
     items: [1, 2, 3].map((n) => ({ title: P(`Project ${n}`), text: P("What it does"), stack: P("Tool · Tool · Tool"), imageAlt: `${P(`Project ${n}`)} built in the ${name} course` })),
   },
   cert: {
-    title: `${name} certification`,
-    text: `You earn a BTree ${name} course certificate and prepare for ${P("industry exams")}. Practice tests and a revision week are included.`,
-    imageAlt: `BTree ${name} course completion certificate`,
-    caption: `Sample BTree ${name} course certificate.`,
+    title: `Which certificate do you get after the ${name} course?`,
+    text: `Receive a **BTree ${name} Course Completion Certificate** issued by BTree Systems, Chennai, upon successfully completing all course requirements, making it a valuable addition to your resume and Social profiles.\n\nThe course also prepares you for ${P("industry exams")}.`,
+    imageAlt: `Sample BTree ${name} course completion certificate issued by BTree Systems, Chennai`,
+    caption: `Sample BTree ${name} course completion certificate.`,
   },
   jobs: {
     title: `Jobs and salary after the ${name} course`,

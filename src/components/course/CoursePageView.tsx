@@ -446,7 +446,11 @@ export default function CoursePageView({ c }: { c: CoursePage }) {
             <h2 id="cert" className="t-h1">
               {c.cert.title}
             </h2>
-            <p className="t-lead muted">{c.cert.text}</p>
+            {c.cert.text.split("\n\n").map((para, i) => (
+              <p key={i} className="t-lead muted">
+                <Rich text={para} />
+              </p>
+            ))}
           </div>
           <figure className="fig">
             <Photo
