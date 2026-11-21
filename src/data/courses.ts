@@ -56,6 +56,7 @@ export const ALL_COURSES: Course[] = [
   { slug: "azure-devops", cat: "cloud", code: "AD", name: "Azure DevOps", out: "Azure Pipelines, Repos, Docker, AKS, Terraform and Bicep.", dur: "1.5 months", mode: "Online", level: "Intermediate" },
   { slug: "salesforce", cat: "cloud", code: "SF", name: "Salesforce", out: "Admin and developer tracks with certification prep.", dur: "80+ hours", mode: "Online · Classroom", level: "Beginner" },
   { slug: "aws-devops-course-chennai", cat: "cloud", code: "DO", name: "AI Integrated AWS DevOps", out: "Linux, Git, Docker, Kubernetes, Jenkins, Terraform.", dur: "4 months", mode: "Online · Classroom", level: "Intermediate" },
+  { slug: "graphic-designing", cat: "design", code: "GR", name: "AI Integrated Graphic Designing", out: "Illustrator, Photoshop, Canva, CorelDRAW and InDesign with AI design tools.", dur: "80+ hours", mode: "Online", level: "Beginner", badge: "New" },
 ];
 
 export const courseBySlug = (slug: string) => ALL_COURSES.find((c) => c.slug === slug);
