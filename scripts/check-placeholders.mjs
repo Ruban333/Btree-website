@@ -16,7 +16,7 @@ const QUOTED = /["'`](\[[^\]"'`\n]{1,70}\])["'`]/g;
 function* walk(dir) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
     const p = path.join(dir, e.name);
-    if (e.isDirectory()) yield* walk(p);
+    if (e.isDirectory()) { if (e.name !== "_hold") yield* walk(p); } // _hold = course pages kept offline
     else if (EXT.test(e.name)) yield p;
   }
 }

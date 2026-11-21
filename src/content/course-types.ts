@@ -76,7 +76,7 @@ export type CoursePage = {
     lead: string;
     proof: { score: string; detail: string };
     /** Label of the syllabus download button */
-    syllabusButton: string;
+    syllabusButton: string; // keep it short ("Download syllabus"): a long label breaks the hero buttons on phones
     /** Title above the enquiry form, e.g. "Talk to an AWS DevOps advisor" */
     formTitle: string;
     /** Sentence under the form title (default: free counselling and demo class, call back within the hour) */

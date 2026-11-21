@@ -1,0 +1,44 @@
+{
+  "_about": "Courses marked 'Need' in the launch sheet. `npm run course:launch` makes the site match this list: these stay live, every other course page is moved to src/content/courses/_hold/ and stays unpublished.",
+  "live": {
+    "Development": [
+      "python-full-stack",
+      "java-full-stack",
+      "dot-net"
+    ],
+    "Data & AI": [
+      "data-analytics",
+      "data-science-machine-learning",
+      "generative-ai",
+      "aws-data-engineering",
+      "azure-data-engineering",
+      "gcp-data-engineering",
+      "pyspark",
+      "databricks",
+      "snowflake",
+      "google-bigquery",
+      "azure-synapse"
+    ],
+    "Cloud & DevOps": [
+      "gcp-devops",
+      "linux",
+      "cyber-security",
+      "aws-training-chennai",
+      "azure-devops",
+      "ccna-ccnp",
+      "salesforce",
+      "aws-devops-course-chennai"
+    ],
+    "Testing & Automation": [
+      "selenium",
+      "playwright-automation",
+      "power-automate"
+    ],
+    "Design": [
+      "ui-ux-design"
+    ],
+    "Marketing": [
+      "digital-marketing"
+    ]
+  }
+}

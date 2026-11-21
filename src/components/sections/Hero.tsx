@@ -1,5 +1,6 @@
 import Link from "next/link";
-import ImageSlot from "@/components/ui/ImageSlot";
+import Photo from "@/components/ui/Photo";
+import { HERO_IMAGE } from "@/data/home-images";
 import { HERO_STATS } from "@/data/home";
 
 export default function Hero() {
@@ -41,11 +42,13 @@ export default function Hero() {
               display: "flex",
             }}
           >
-            <ImageSlot
-              what="Hero photo: trainer with a live batch"
-              file="software-training-institute-chennai-btree-classroom.webp"
-              alt="Trainer teaching a live software training batch at BTree Systems, Chennai"
-              style={{ width: "100%", height: "100%", background: "var(--brand-soft)" }}
+            <Photo
+              src={HERO_IMAGE.src}
+              alt={HERO_IMAGE.alt}
+              position={HERO_IMAGE.position}
+              sizes="(min-width: 900px) 40vw, 100vw"
+              eager
+              style={{ width: "100%", height: "100%", borderRadius: 0, background: "var(--brand-soft)" }}
             />
           </div>
         </figure>

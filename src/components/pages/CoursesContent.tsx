@@ -116,7 +116,7 @@ export default function CoursesContent() {
                 <span className="t-small">
                   <span className="muted">Leads to</span> <b>Junior Python developer</b>
                 </span>{" "}
-                <Link className="lnk t-small" href="/courses/aws-devops-course-chennai">
+                <Link className="lnk t-small" href="/courses/python-full-stack">
                   Python Full Stack course
                 </Link>
               </div>
@@ -154,7 +154,7 @@ export default function CoursesContent() {
                 <span className="t-small">
                   <span className="muted">Leads to</span> <b>Associate Java developer</b>
                 </span>{" "}
-                <Link className="lnk t-small" href="/courses/aws-devops-course-chennai">
+                <Link className="lnk t-small" href="/courses/java-full-stack">
                   Java Full Stack course
                 </Link>
               </div>
@@ -192,7 +192,7 @@ export default function CoursesContent() {
                 <span className="t-small">
                   <span className="muted">Leads to</span> <b>Cloud engineer</b>
                 </span>{" "}
-                <Link className="lnk t-small" href="/courses/aws-devops-course-chennai">
+                <Link className="lnk t-small" href="/courses/aws-training-chennai">
                   AWS Solutions Architect course
                 </Link>
               </div>
@@ -268,7 +268,7 @@ export default function CoursesContent() {
                 <span className="t-small">
                   <span className="muted">Leads to</span> <b>Data analyst</b>
                 </span>{" "}
-                <Link className="lnk t-small" href="/courses/aws-devops-course-chennai">
+                <Link className="lnk t-small" href="/courses/data-analytics">
                   Data Analytics course
                 </Link>
               </div>
@@ -306,7 +306,7 @@ export default function CoursesContent() {
                 <span className="t-small">
                   <span className="muted">Leads to</span> <b>QA automation engineer</b>
                 </span>{" "}
-                <Link className="lnk t-small" href="/courses/aws-devops-course-chennai">
+                <Link className="lnk t-small" href="/courses/selenium">
                   Software Testing course
                 </Link>
               </div>

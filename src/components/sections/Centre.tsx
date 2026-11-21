@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ImageSlot from "@/components/ui/ImageSlot";
+import Photo from "@/components/ui/Photo";
 import { CENTRE_IMAGES } from "@/data/home";
 
 export default function Centre() {
@@ -28,11 +28,12 @@ export default function Centre() {
           }}
         >
           {CENTRE_IMAGES.map((img) => (
-            <ImageSlot
-              key={img.file}
-              what={img.what}
-              file={img.file}
+            <Photo
+              key={img.src}
+              src={img.src}
               alt={img.alt}
+              position={img.position}
+              sizes={img.large ? "(min-width: 900px) 50vw, 100vw" : "(min-width: 900px) 25vw, 100vw"}
               style={img.large ? { gridRow: "span 2" } : undefined}
             />
           ))}

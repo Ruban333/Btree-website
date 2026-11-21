@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Photo from "@/components/ui/Photo";
 import { COURSES } from "@/data/home";
+import { courseImage } from "@/data/home-images";
 
 export default function PopularCourses() {
   return (
@@ -18,7 +20,13 @@ export default function PopularCourses() {
         </div>
         <div className="g3">
           {COURSES.map((c) => (
-            <Link key={c.name} className="card course" href={`/courses/${c.slug}`}>
+            <Link key={c.name} className="card course" href={`/courses/${c.slug}`} style={{ overflow: "hidden" }}>
+              <Photo
+                src={courseImage(c.cat, c.slug)}
+                alt={`${c.name} course at BTree Systems, Chennai`}
+                sizes="(min-width: 900px) 33vw, 100vw"
+                style={{ aspectRatio: "1000 / 714", background: "#0a1733", width: "calc(100% + 48px)", maxWidth: "none", margin: "-24px -24px 4px", borderRadius: "16px 16px 0 0" }}
+              />
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <span className="ic">{c.code}</span>
                 <span className={c.neutral ? "tag tag--n" : "tag"}>{c.tag}</span>

@@ -105,7 +105,7 @@ export default function AboutContent() {
               <p className="t-h3">The gap</p>
               <p className="muted">
                 Our founders wanted advanced Hadoop training and found few reliable options in India, especially in
-                Tamil Nadu. The alternatives were overseas programmes costing over ₹1,50,000.
+                Tamil Nadu. The alternatives were expensive overseas programmes.
               </p>
             </li>
             <li
