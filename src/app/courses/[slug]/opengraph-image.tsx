@@ -15,6 +15,7 @@ export default async function CourseOgImage({ params }: { params: Promise<{ slug
   return new ImageResponse(
     (
       <OgCard
+        eyebrow={course ? course.level : undefined}
         title={course ? `${course.name} course in Chennai` : SITE.tagline}
         subtitle={course ? `${course.dur} · ${course.mode} · Placement support` : "Live online + classroom batches"}
         footer={`${SITE.name} · Perungudi, Chennai · Since ${SITE.foundingYear}`}

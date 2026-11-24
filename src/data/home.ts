@@ -68,7 +68,7 @@ const HOME_COURSES: [string, string, boolean][] = [
 /** The six courses featured on the home page (full catalogue lives in data/courses.ts). */
 export const COURSES = HOME_COURSES.map(([slug, tag, neutral]) => {
   const c = courseBySlug(slug)!;
-  return { slug, cat: c.cat, code: c.code, tag, neutral, name: c.name, out: c.out, dur: c.dur, mode: c.mode };
+  return { slug, cat: c.cat, code: c.code, tag, neutral, name: c.name, out: c.out, dur: c.dur, mode: c.mode, next: "[date]" };
 });
 
 export const PROCESS = [
