@@ -58,17 +58,17 @@ export const PROFILE_WHY: Record<ProfileId, string> = {
 
 const HOME_COURSES: [string, string, boolean][] = [
   ["python-full-stack", "Most popular", false],
-  ["data-science-machine-learning", "Data", true],
+  ["aws-training-chennai", "Cloud", true],
   ["data-analytics", "Data", true],
-  ["aws-data-engineering", "Cloud", true],
-  ["selenium", "Testing", true],
+  ["aws-devops-course-chennai", "Cloud", true],
+  ["software-testing", "Testing", true],
   ["ui-ux-design", "Design", true],
 ];
 
 /** The six courses featured on the home page (full catalogue lives in data/courses.ts). */
 export const COURSES = HOME_COURSES.map(([slug, tag, neutral]) => {
   const c = courseBySlug(slug)!;
-  return { slug, cat: c.cat, code: c.code, tag, neutral, name: c.name, out: c.out, dur: c.dur, mode: c.mode, next: "[date]" };
+  return { slug, code: c.code, tag, neutral, name: c.name, out: c.out, dur: c.dur, mode: c.mode, next: "[date]" };
 });
 
 export const PROCESS = [
@@ -79,11 +79,11 @@ export const PROCESS = [
 ];
 
 export const CENTRE_IMAGES = [
-  { what: "Live batch in the classroom", src: "/images/home/btree-chennai-classroom-live-batch.webp", alt: "Trainer teaching a live batch in the BTree Systems classroom in Chennai", large: true, position: "40% 50%" },
-  { what: "Hands-on lab", src: "/images/home/btree-chennai-hands-on-lab.webp", alt: "Learners practising hands-on on laptops and monitors at BTree Chennai", position: "60% 50%" },
-  { what: "One-to-one mentoring", src: "/images/home/btree-mentor-one-to-one-guidance.webp", alt: "A mentor giving one-to-one guidance to a learner at a laptop", position: "50% 40%" },
-  { what: "Trainer-led session", src: "/images/home/btree-chennai-trainer-presentation-batch.webp", alt: "Trainer presenting to a batch on a projector screen at BTree Chennai", position: "55% 50%" },
-  { what: "Case-study session", src: "/images/home/btree-chennai-case-study-session.webp", alt: "Trainer presenting a product case study to a batch at BTree Chennai", position: "35% 50%" },
+  { what: "Live Python batch in the classroom", file: "btree-chennai-classroom-python-batch.webp", alt: "Trainer teaching a live Python full stack batch at BTree, Chennai", large: true },
+  { what: "Hands-on lab", file: "btree-chennai-computer-lab.webp", alt: "Learners practising AWS labs on individual systems at BTree Chennai" },
+  { what: "Mock interview", file: "btree-mock-interview-session.webp", alt: "BTree mentor conducting a mock technical interview" },
+  { what: "Placement drive", file: "btree-placement-drive-2026.webp", alt: "Hiring partners interviewing BTree learners at a placement drive" },
+  { what: "Certificate day", file: "btree-course-certificate-ceremony.webp", alt: "BTree learners receiving course completion certificates" },
 ];
 
 export const PARTNERS = ["Infosys", "TCS", "Wipro", "Cognizant", "Intel", "IBM", "Freshworks"];
@@ -93,6 +93,7 @@ export const FAQS = [
   { q: "Which IT course is best for freshers in Chennai?", a: "Python Full Stack, Java Full Stack, Data Analytics and Software Testing are the most popular starting points for freshers in Chennai. They need no prior experience, take 3–4 months, and lead to entry-level developer, analyst or QA roles. A BTree advisor can match one to your degree and goals." },
   { q: "Do BTree courses include placement support?", a: "Yes. Every BTree course includes placement support: resume and LinkedIn reviews, mock technical and HR interviews with one-to-one feedback, and referrals to hiring partners. Support continues after the course ends, until you are placed." },
   { q: "Are classes online or in Chennai?", a: "Both. You can join live online batches from anywhere, or classroom batches at the BTree centre in Chennai. Every session is recorded so you can revise or catch up." },
+  { q: "How much do IT courses cost at BTree?", a: "Course fees at BTree range from ₹[MIN] to ₹[MAX] depending on the course and duration, with no-cost EMI options. The fee includes live classes, projects, certification and placement support. Each course page lists its exact fee and next batch date." },
 ];
 
 export const KEYWORD_LINKS = [
@@ -116,7 +117,7 @@ export const FOOTER = {
   email: "info@btreesystems.com",
   whatsapp: "+91 73973 93335",
   columns: [
-    { title: "Courses", links: [["All courses", "/courses"], ["Python Full Stack", "/courses/python-full-stack"], ["Data Science", "/courses/data-science-machine-learning"], ["Selenium Testing", "/courses/selenium"], ["Data Analytics", "/courses/data-analytics"], ["UI/UX Design", "/courses/ui-ux-design"]] },
+    { title: "Courses", links: [["All courses", "/courses"], ["Python Full Stack", "/courses/python-full-stack"], ["AWS DevOps", "/courses/aws-devops-course-chennai"], ["AWS Solutions Architect", "/courses/aws-training-chennai"], ["Data Analytics", "/courses/data-analytics"], ["UI/UX Design", "/courses/ui-ux-design"]] },
     { title: "Company", links: [["About BTree", "/about-us"], ["Corporate training", "/corporate-training"], ["Job portal", "/placement-job-portal"], ["Become an instructor", "/become-an-instructor"], ["Contact", "/contact"]] },
     { title: "Resources", links: [["Blog", "/blog"], ["Interview questions", "/blog/interview/full-stack-developer-interview-questions"], ["Terms of use", "/terms-of-use"], ["Privacy policy", "/privacy-policy"], ["Disclaimer", "/disclaimer"]] },
   ] as { title: string; links: [string, string][] }[],

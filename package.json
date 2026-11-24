@@ -9,17 +9,12 @@
     "lint": "eslint",
     "check:placeholders": "node scripts/check-placeholders.mjs",
     "prebuild": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-courses.mjs && node scripts/check-placeholders.mjs",
-    "course:list": "node scripts/course-launch.mjs list",
-    "course:launch": "node scripts/course-launch.mjs launch",
-    "course:hold": "node scripts/course-launch.mjs hold",
-    "course:release": "node scripts/course-launch.mjs release",
     "course:new": "node scripts/new-course.mjs",
     "course:check": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-courses.mjs",
     "course:import": "node scripts/import-course-design.mjs",
     "course:compare": "node scripts/compare-design.mjs",
     "security:audit": "npm audit --omit=dev --audit-level=high",
     "security:check": "npm run lint && npm run security:audit",
-    "seo:suggest": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/seo-suggest.mjs",
     "seo:indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {

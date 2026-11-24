@@ -6,7 +6,7 @@ import { breadcrumbSchema, courseListSchema } from "@/lib/schema";
 
 const TITLE = "IT Courses in Chennai with Placement | 40+ Courses | BTree";
 const DESC =
-  "Compare 40+ live IT courses in Chennai — full stack, AWS, DevOps, data, AI and testing — with duration and placement support.";
+  "Compare 40+ live IT courses in Chennai — full stack, AWS, DevOps, data, AI and testing — with fees, duration and placement support.";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },

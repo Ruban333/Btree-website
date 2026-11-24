@@ -22,7 +22,7 @@ export default function ContactContent() {
                 </h1>
                 <p className="t-lead muted" style={{ maxWidth: "540px" }}>
                   BTree Systems is a software training institute at Greeta Techpark, Perungudi, Chennai 600096. Ask
-                  about courses, batches or placements; we reply within an hour during opening hours.
+                  about courses, fees, batches or placements; we reply within an hour during opening hours.
                 </p>
               </div>
               <div className="g2" style={{ gap: "12px" }}>

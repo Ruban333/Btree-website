@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { useMemo, useState, useSyncExternalStore } from "react";
-import Photo from "@/components/ui/Photo";
-import { courseImage } from "@/data/home-images";
+import ImageSlot from "@/components/ui/ImageSlot";
 import { ALL_COURSES, CATEGORIES, type CourseCat } from "@/data/courses";
+
+const slug = (s: string) => s.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/-$/, "");
 
 /**
  * Every course is in the server-rendered HTML (crawlable); the track chips and the
@@ -49,11 +50,11 @@ export default function CourseBrowser() {
       <div className="g3">
         {shown.map((c) => (
           <Link key={c.slug} className="card card--line course" href={`/courses/${c.slug}`} style={{ overflow: "hidden" }}>
-            <Photo
-              src={courseImage(c.cat, c.slug)}
+            <ImageSlot
+              what="Course image to supply"
+              file={`${slug(c.name)}-course-chennai.webp`}
               alt={`${c.name} course at BTree Systems, Chennai`}
-              sizes="(min-width: 900px) 33vw, 100vw"
-              style={{ aspectRatio: "1000 / 714", background: "#0a1733", width: "calc(100% + 48px)", maxWidth: "none", margin: "-24px -24px 4px", borderRadius: "16px 16px 0 0" }}
+              style={{ aspectRatio: "16 / 9", width: "calc(100% + 48px)", maxWidth: "none", margin: "-24px -24px 4px", borderRadius: "16px 16px 0 0" }}
             />
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               <span className="ic">{c.code}</span>

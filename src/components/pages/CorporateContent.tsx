@@ -400,7 +400,7 @@ export default function CorporateContent() {
               </summary>
               <div className="bd">
                 Corporate batches usually start from [5] participants. Smaller teams can join a public batch with
-                dedicated support. Contact us with your team size and topic for a proposal.
+                dedicated support. Contact us with your team size and topic for a proposal and pricing.
               </div>
             </details>
           </div>

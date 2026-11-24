@@ -2,7 +2,6 @@ import Link from "next/link";
 import LeadForm from "@/components/forms/LeadForm";
 import Rich from "@/components/course/Rich";
 import ImageSlot from "@/components/ui/ImageSlot";
-import Photo from "@/components/ui/Photo";
 import type { CoursePage } from "@/content/course-types";
 import { SITE } from "@/lib/site";
 
@@ -89,7 +88,7 @@ export default function CoursePageView({ c }: { c: CoursePage }) {
               </p>
               <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
                 <a className="btn btn--primary btn--lg" href="#enquire">
-                  Get batch details
+                  Get fees and next batch
                 </a>
                 <a className="btn btn--secondary btn--lg" href="#">
                   {c.hero.syllabusButton}
@@ -449,11 +448,11 @@ export default function CoursePageView({ c }: { c: CoursePage }) {
             <p className="t-lead muted">{c.cert.text}</p>
           </div>
           <figure className="fig">
-            <Photo
-              src="/images/btree-course-completion-certificate-sample.webp"
+            <ImageSlot
+              what="Image to supply"
+              file={`${slug(c.cert.imageAlt)}.webp`}
               alt={c.cert.imageAlt}
-              sizes="(min-width: 900px) 50vw, 100vw"
-              style={{ aspectRatio: "1400 / 990", border: "1px solid var(--border)" }}
+              style={{ aspectRatio: "16 / 10", background: "var(--bg)" }}
             />
             <figcaption>{c.cert.caption}</figcaption>
           </figure>
