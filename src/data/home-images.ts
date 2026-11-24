@@ -26,7 +26,7 @@ const CARD_ART = new Set([
   "ccna-ccnp", "cyber-security", "data-analytics", "databricks", "data-science-machine-learning", "digital-marketing",
   "dot-net", "gcp-devops", "generative-ai", "google-bigquery", "java-full-stack", "linux", "playwright-automation",
   "power-automate", "pyspark", "python-full-stack", "salesforce", "selenium", "snowflake", "ui-ux-design", "azure-devops",
-  "gcp-data-engineering", "graphic-designing",
+  "gcp-data-engineering",
 ]);
 
 export function courseImage(cat: CourseCat, slug: string) {
