@@ -26,7 +26,6 @@ import ccnaCcnp from "./ccna-ccnp";
 import azureDevops from "./azure-devops";
 import salesforce from "./salesforce";
 import awsDevopsCourseChennai from "./aws-devops-course-chennai";
-import graphicDesigning from "./graphic-designing";
 // @course-imports (npm run course:new adds lines here)
 
 /** Every course that has a full page. Add a course with: npm run course:new -- <slug> "<Name>" */
@@ -58,7 +57,6 @@ const ALL: CoursePage[] = [
   azureDevops,
   salesforce,
   awsDevopsCourseChennai,
-  graphicDesigning,
   // @course-list
 ];
 
