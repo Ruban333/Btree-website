@@ -53,8 +53,7 @@ export type Project = {
   imageAlt: string;
 };
 
-/** salary = market average for 0 to 4 years; experienced = 5+ years (optional: shows a second column). */
-export type JobRole = { role: string; salary: string; experienced?: string; employers: string };
+export type JobRole = { role: string; salary: string; employers: string };
 
 export type CoursePage = {
   /** URL segment: /courses/<slug>. Must also exist in data/courses.ts. */
