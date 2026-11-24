@@ -24,9 +24,26 @@ const course: CoursePage = {
   glance: {
     title: "How long is the Generative AI course in Chennai?",
     lead: "The course runs about **50+ hours over [X] months**, with build projects in every module.",
+    columns: 3,
     batches: [
-      { name: "Duration", duration: "[X months]" },
-      { name: "Hours of learning", duration: "50+ hours" },
+      {
+        name: "Weekday batch",
+        duration: "[X] months",
+        schedule: ["[timings]"],
+        note: "For freshers or full-time learners",
+      },
+      {
+        name: "Weekend batch",
+        duration: "[X] months",
+        schedule: ["Saturday and Sunday", "8:00–11:00 PM IST"],
+        note: "Fits around a full-time job",
+      },
+      {
+        name: "Fast-track batch",
+        duration: "[X] months",
+        schedule: ["[timings]"],
+        note: "For learners who want to finish sooner",
+      },
     ],
   },
   whatis: {

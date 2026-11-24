@@ -174,21 +174,17 @@ export default function CoursePageView({ c }: { c: CoursePage }) {
                 >
                   {b.duration}
                 </p>
-                {b.schedule && b.schedule.length > 0 && (
-                  <p style={{ fontWeight: 600, fontSize: 15, lineHeight: 1.45 }}>
-                    {b.schedule.map((line, i) => (
-                      <span key={i}>
-                        {i > 0 && <br />}
-                        {line}
-                      </span>
-                    ))}
-                  </p>
-                )}
-                {b.note && (
-                  <p className="t-small" style={{ color: "var(--ink-muted)", marginTop: "auto" }}>
-                    {b.note}
-                  </p>
-                )}
+                <p style={{ fontWeight: 600, fontSize: 15, lineHeight: 1.45 }}>
+                  {b.schedule.map((line, i) => (
+                    <span key={i}>
+                      {i > 0 && <br />}
+                      {line}
+                    </span>
+                  ))}
+                </p>
+                <p className="t-small" style={{ color: "var(--ink-muted)", marginTop: "auto" }}>
+                  {b.note}
+                </p>
               </article>
             ))}
           </div>
@@ -303,11 +299,9 @@ export default function CoursePageView({ c }: { c: CoursePage }) {
             {c.who.items.map((i) => (
               <div key={i.title}>
                 <h3 className="t-h3">{i.title}</h3>
-                {i.text && (
-                  <p className="muted" style={{ marginTop: 6 }}>
-                    {i.text}
-                  </p>
-                )}
+                <p className="muted" style={{ marginTop: 6 }}>
+                  {i.text}
+                </p>
               </div>
             ))}
           </div>
@@ -422,11 +416,9 @@ export default function CoursePageView({ c }: { c: CoursePage }) {
                 <h3 className="t-h3" style={{ padding: "0 16px" }}>
                   {p.title}
                 </h3>
-                {p.text && (
-                  <p className="muted" style={{ padding: "0 16px" }}>
-                    {p.text}
-                  </p>
-                )}
+                <p className="muted" style={{ padding: "0 16px" }}>
+                  {p.text}
+                </p>
                 {p.stack && (
                   <p className="t-small" style={{ marginTop: "auto", padding: "0 16px" }}>
                     <b>{p.stack}</b>

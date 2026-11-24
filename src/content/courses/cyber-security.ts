@@ -21,10 +21,26 @@ const course: CoursePage = {
   },
   glance: {
     title: "How long is the cyber security course?",
-    lead: "The cyber security course takes **5 months, about 180 hours** of live classes and labs.",
+    lead: "The cyber security course takes **5 months, about 180 hours** of live classes and labs. Every batch covers the same syllabus and projects.",
     batches: [
-      { name: "Duration", duration: "5 months" },
-      { name: "Hours of learning", duration: "180 hours" },
+      {
+        name: "Weekday batch",
+        duration: "5 months",
+        schedule: ["Monday to Friday", "2 hours a day"],
+        note: "For freshers or full-time learners",
+      },
+      {
+        name: "Weekend batch",
+        duration: "6 months",
+        schedule: ["Saturday and Sunday", "4 hours a day"],
+        note: "Fits around a full-time job",
+      },
+      {
+        name: "Fast-track batch",
+        duration: "4 months",
+        schedule: ["Monday to Friday", "3 hours a day"],
+        note: "For IT professionals who want to finish sooner",
+      },
     ],
   },
   whatis: {
@@ -349,7 +365,7 @@ const course: CoursePage = {
       },
       {
         q: "How long does it take to learn cyber security?",
-        a: "The BTree course takes 5 months, about 180 hours of live classes and labs. Most learners are ready for L1 SOC interviews by the end.",
+        a: "The BTree course takes 5 months on weekdays, 6 months on weekends or 4 months on the fast-track batch. Most learners are ready for L1 SOC interviews by the end.",
       },
       {
         q: "What is the salary of a cyber security analyst in Chennai?",

@@ -9,26 +9,26 @@
 - Contact: info@btreesystems.com, +91 91769 97676, WhatsApp +91 73973 93335
 
 ## Pages
-- [Home](https://btreesystems.com/): overview, popular courses, process, FAQs
-- [All courses](https://btreesystems.com/courses): course catalogue
-- [Python Full Stack](https://btreesystems.com/courses/python-full-stack): 4 months. Django, React and SQL with 6 live projects.
-- [Java Full Stack](https://btreesystems.com/courses/java-full-stack): 4 months. Core Java, Spring Boot, React and MySQL.
-- [MERN Stack](https://btreesystems.com/courses/mern-stack): 3.5 months. MongoDB, Express, React and Node with 5 projects.
-- [AWS Solutions Architect](https://btreesystems.com/courses/aws-training-chennai): 2.5 months. Hands-on labs and SAA-C03 exam preparation.
-- [Microsoft Azure](https://btreesystems.com/courses/microsoft-azure): 2.5 months. AZ-104 administration with real deployments.
-- [AWS DevOps](https://btreesystems.com/courses/aws-devops-course-chennai): 4 months. Linux, Git, Docker, Kubernetes, Jenkins, Terraform.
-- [Data Analytics](https://btreesystems.com/courses/data-analytics): 3 months. Excel, SQL, Power BI and Python for analysis.
-- [Data Science & ML](https://btreesystems.com/courses/data-science-machine-learning): 5 months. Python, statistics, machine learning and deployment.
-- [Generative AI](https://btreesystems.com/courses/generative-ai): 2 months. LLMs, prompt engineering, RAG and AI apps.
-- [Software Testing](https://btreesystems.com/courses/software-testing): 3 months. Manual testing, Selenium with Java and API testing.
-- [Playwright Automation](https://btreesystems.com/courses/playwright-automation): 2 months. Modern test automation with TypeScript.
-- [UI/UX Design](https://btreesystems.com/courses/ui-ux-design): 3 months. Research, Figma and a case-study portfolio.
-- [CCNA & CCNP](https://btreesystems.com/courses/ccna-ccnp): 4 months. Cisco routing, switching, security and automation labs.
-- [Cyber Security](https://btreesystems.com/courses/cyber-security): 5 months. Ethical hacking, SOC and SIEM, web app and cloud security.
-- [Azure DevOps](https://btreesystems.com/courses/azure-devops): 3 months. Azure Pipelines, Repos, Docker, AKS, Terraform and Bicep.
-- [AWS Data Engineering](https://btreesystems.com/courses/aws-data-engineering): 4 months. SQL, PySpark, S3, Glue, Redshift, Athena and Kinesis.
-- [Azure Data Engineering](https://btreesystems.com/courses/azure-data-engineering): 4 months. Data Factory, Databricks, PySpark and Microsoft Fabric.
-- [GCP Data Engineering](https://btreesystems.com/courses/gcp-data-engineering): 4 months. BigQuery, Dataflow, Pub/Sub, Dataproc and Composer.
-- [Microsoft Power Automate](https://btreesystems.com/courses/power-automate): 2 months. Cloud flows, desktop RPA, AI Builder and Copilot.
+- [Home](https://www.btreesystems.com/): overview, popular courses, process, FAQs
+- [All courses](https://www.btreesystems.com/courses): course catalogue
+- [Python Full Stack](https://www.btreesystems.com/courses/python-full-stack): 4 months. Django, React and SQL with 6 live projects.
+- [Java Full Stack](https://www.btreesystems.com/courses/java-full-stack): 4 months. Core Java, Spring Boot, React and MySQL.
+- [MERN Stack](https://www.btreesystems.com/courses/mern-stack): 3.5 months. MongoDB, Express, React and Node with 5 projects.
+- [AWS Solutions Architect](https://www.btreesystems.com/courses/aws-training-chennai): 2.5 months. Hands-on labs and SAA-C03 exam preparation.
+- [Microsoft Azure](https://www.btreesystems.com/courses/microsoft-azure): 2.5 months. AZ-104 administration with real deployments.
+- [AWS DevOps](https://www.btreesystems.com/courses/aws-devops-course-chennai): 4 months. Linux, Git, Docker, Kubernetes, Jenkins, Terraform.
+- [Data Analytics](https://www.btreesystems.com/courses/data-analytics): 3 months. Excel, SQL, Power BI and Python for analysis.
+- [Data Science & ML](https://www.btreesystems.com/courses/data-science-machine-learning): 5 months. Python, statistics, machine learning and deployment.
+- [Generative AI](https://www.btreesystems.com/courses/generative-ai): 2 months. LLMs, prompt engineering, RAG and AI apps.
+- [Software Testing](https://www.btreesystems.com/courses/software-testing): 3 months. Manual testing, Selenium with Java and API testing.
+- [Playwright Automation](https://www.btreesystems.com/courses/playwright-automation): 2 months. Modern test automation with TypeScript.
+- [UI/UX Design](https://www.btreesystems.com/courses/ui-ux-design): 3 months. Research, Figma and a case-study portfolio.
+- [CCNA & CCNP](https://www.btreesystems.com/courses/ccna-ccnp): 4 months. Cisco routing, switching, security and automation labs.
+- [Cyber Security](https://www.btreesystems.com/courses/cyber-security): 5 months. Ethical hacking, SOC and SIEM, web app and cloud security.
+- [Azure DevOps](https://www.btreesystems.com/courses/azure-devops): 3 months. Azure Pipelines, Repos, Docker, AKS, Terraform and Bicep.
+- [AWS Data Engineering](https://www.btreesystems.com/courses/aws-data-engineering): 4 months. SQL, PySpark, S3, Glue, Redshift, Athena and Kinesis.
+- [Azure Data Engineering](https://www.btreesystems.com/courses/azure-data-engineering): 4 months. Data Factory, Databricks, PySpark and Microsoft Fabric.
+- [GCP Data Engineering](https://www.btreesystems.com/courses/gcp-data-engineering): 4 months. BigQuery, Dataflow, Pub/Sub, Dataproc and Composer.
+- [Microsoft Power Automate](https://www.btreesystems.com/courses/power-automate): 2 months. Cloud flows, desktop RPA, AI Builder and Copilot.
 
 <!-- Regenerate the course list when courses.ts changes; add /about-us, /contact, /blog once they have stable content. Keep absolute URLs in sync with NEXT_PUBLIC_SITE_URL. -->

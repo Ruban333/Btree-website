@@ -39,7 +39,6 @@ export function indianMobile(v: string): string | null {
   let d = v.replace(/[\s\-()]/g, "");
   if (d.startsWith("+")) d = d.slice(1);
   if (d.length === 12 && d.startsWith("91")) d = d.slice(2);
-  if (d.length === 11 && d.startsWith("0")) d = d.slice(1); // trunk prefix, e.g. 098765 43210
   return /^[6-9]\d{9}$/.test(d) ? d : null;
 }
 

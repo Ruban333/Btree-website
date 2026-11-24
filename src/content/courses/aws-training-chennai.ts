@@ -24,9 +24,26 @@ const course: CoursePage = {
   glance: {
     title: "How long is the AWS course in Chennai?",
     lead: "The course runs about **55+ hours (classroom) or 45+ hours (online) over [X] months**, with console labs throughout.",
+    columns: 3,
     batches: [
-      { name: "Duration", duration: "[X months]" },
-      { name: "Hours of learning", duration: "55+ hours", note: "Classroom 55+ hours · online 45+ hours" },
+      {
+        name: "Weekday batch",
+        duration: "[X] months",
+        schedule: ["[timings]"],
+        note: "For freshers or full-time learners",
+      },
+      {
+        name: "Weekend batch",
+        duration: "[X] months",
+        schedule: ["Saturday and Sunday", "8:00–11:00 PM IST"],
+        note: "Fits around a full-time job",
+      },
+      {
+        name: "Fast-track batch",
+        duration: "[X] months",
+        schedule: ["[timings]"],
+        note: "For learners who want to finish sooner",
+      },
     ],
   },
   whatis: {

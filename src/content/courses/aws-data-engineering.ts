@@ -21,10 +21,26 @@ const course: CoursePage = {
   },
   glance: {
     title: "How long is the AWS data engineering course?",
-    lead: "The AWS data engineering course takes **4 months, about 160 hours** of live classes and labs.",
+    lead: "The AWS data engineering course takes **4 months, about 160 hours** of live classes and labs. Every batch covers the same syllabus and projects.",
     batches: [
-      { name: "Duration", duration: "4 months" },
-      { name: "Hours of learning", duration: "160 hours" },
+      {
+        name: "Weekday batch",
+        duration: "4 months",
+        schedule: ["Monday to Friday", "2 hours a day"],
+        note: "For freshers or full-time learners",
+      },
+      {
+        name: "Weekend batch",
+        duration: "5 months",
+        schedule: ["Saturday and Sunday", "4 hours a day"],
+        note: "Fits around a full-time job",
+      },
+      {
+        name: "Fast-track batch",
+        duration: "3 months",
+        schedule: ["Monday to Friday", "3 hours a day"],
+        note: "For SQL or ETL professionals",
+      },
     ],
   },
   whatis: {
@@ -345,7 +361,7 @@ const course: CoursePage = {
       },
       {
         q: "How long does it take to learn AWS data engineering?",
-        a: "The BTree course takes 4 months, about 160 hours of live classes and labs.",
+        a: "The BTree course takes 4 months on weekdays, 5 months on weekends or 3 months on the fast-track batch.",
       },
       {
         q: "What is the salary of an AWS data engineer in Chennai?",

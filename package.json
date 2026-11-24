@@ -14,8 +14,7 @@
     "course:import": "node scripts/import-course-design.mjs",
     "course:compare": "node scripts/compare-design.mjs",
     "security:audit": "npm audit --omit=dev --audit-level=high",
-    "security:check": "npm run lint && npm run security:audit",
-    "seo:indexnow": "node scripts/indexnow.mjs"
+    "security:check": "npm run lint && npm run security:audit"
   },
   "dependencies": {
     "next": "16.4.6",

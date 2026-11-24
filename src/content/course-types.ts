@@ -14,16 +14,15 @@
 
 export type Item = { title: string; text: string };
 
-/** One figure in "How long is the course": e.g. { name: "Duration", duration: "4 months" }. No batch timings. */
 export type Batch = {
-  /** e.g. "Duration" or "Hours of learning" */
+  /** e.g. "Weekday batch" */
   name: string;
-  /** The figure, e.g. "4 months" or "160 hours" */
+  /** e.g. "4 months" */
   duration: string;
-  /** Optional extra lines under the figure */
-  schedule?: string[];
-  /** Optional short caption */
-  note?: string;
+  /** Days and hours, one line per entry, e.g. ["Monday to Friday", "2 hours a day"] */
+  schedule: string[];
+  /** One short sentence on who it suits */
+  note: string;
 };
 
 export type PipeStep = {
@@ -45,8 +44,7 @@ export type Module = {
 
 export type Project = {
   title: string;
-  /** Optional one-sentence description; the card shows only the title when absent */
-  text?: string;
+  text: string;
   /** Tools used, e.g. "Jenkins · Docker · ECR · EKS" (optional; the card is laid out without it when absent) */
   stack?: string;
   /** Alt text for the project image (also drives the image file name) */
@@ -108,7 +106,7 @@ export type CoursePage = {
   /** Use items (title + sentence cards) OR bullets (single-sentence checklist cards). */
   outcomes: { title: string; lead: string; items?: Item[]; bullets?: string[] };
   /** note: optional closing sentence under the cards (e.g. a prerequisite) */
-  who: { title: string; items: { title: string; text?: string }[]; note?: string };
+  who: { title: string; items: Item[]; note?: string };
   /** Use modules (expandable, with sessions and topics) OR list (a numbered list of module titles). */
   curriculum: { title: string; lead: string; modules?: Module[]; list?: string[] };
   tools: { title: string; items: string[] };

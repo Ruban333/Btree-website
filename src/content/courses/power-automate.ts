@@ -21,10 +21,26 @@ const course: CoursePage = {
   },
   glance: {
     title: "How long is the Power Automate course?",
-    lead: "The Power Automate course takes **2 months, about 70 hours** of live classes and hands-on labs.",
+    lead: "The Power Automate course takes **2 months, about 70 hours** of live classes and hands-on labs. Every batch covers the same syllabus and projects.",
     batches: [
-      { name: "Duration", duration: "2 months" },
-      { name: "Hours of learning", duration: "70 hours" },
+      {
+        name: "Weekday batch",
+        duration: "2 months",
+        schedule: ["Monday to Friday", "2 hours a day"],
+        note: "For freshers or full-time learners",
+      },
+      {
+        name: "Weekend batch",
+        duration: "10 weeks",
+        schedule: ["Saturday and Sunday", "4 hours a day"],
+        note: "Fits around a full-time job",
+      },
+      {
+        name: "Fast-track batch",
+        duration: "6 weeks",
+        schedule: ["Monday to Friday", "3 hours a day"],
+        note: "For learners who want to finish sooner",
+      },
     ],
   },
   whatis: {
@@ -346,7 +362,7 @@ const course: CoursePage = {
       },
       {
         q: "How long does it take to learn Power Automate?",
-        a: "The BTree course takes 2 months, about 70 hours of live classes and labs. Most learners can build production-ready flows by week 5.",
+        a: "The BTree course takes 2 months on weekdays, 10 weeks on weekends or 6 weeks on the fast-track batch. Most learners can build production-ready flows by week 5.",
       },
       {
         q: "What is the salary of a Power Automate developer in Chennai?",

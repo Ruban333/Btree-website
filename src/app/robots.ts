@@ -16,17 +16,11 @@ const AI_BOTS = [
   "Bingbot",
 ];
 
-/** Bandwidth-heavy crawlers with no search or answer-engine value for this site. Keep in step with BAD_USER_AGENTS. */
-const SCRAPERS = ["Bytespider", "MJ12bot", "BLEXBot"];
-
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      // Search-result style URLs (?q=) are thin duplicates of /courses; keep crawl budget for real pages.
-      { userAgent: "*", allow: "/", disallow: ["/api/", "/*?q="] },
-      { userAgent: AI_BOTS, allow: "/", disallow: ["/api/", "/*?q="] },
-      // Aggressive scrapers that give us nothing back. The proxy also refuses them, because many ignore robots.txt.
-      { userAgent: SCRAPERS, disallow: "/" },
+      { userAgent: "*", allow: "/", disallow: ["/api/"] },
+      { userAgent: AI_BOTS, allow: "/", disallow: ["/api/"] },
     ],
     sitemap: absoluteUrl("/sitemap.xml"),
     host: absoluteUrl("/"),

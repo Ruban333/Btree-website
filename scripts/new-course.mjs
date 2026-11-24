@@ -1,5 +1,5 @@
 // Creates a new course page: content file + registry entry + catalogue entry.
-//   npm run course:new -- <slug> "<Name>" [--cat dev|cloud|data|test|design|marketing] [--track "Cloud & DevOps"]
+//   npm run course:new -- <slug> "<Name>" [--cat dev|cloud|data|test|design] [--track "Cloud & DevOps"]
 // Everything you still need to write is a [bracketed placeholder]; `npm run build` refuses to ship until they are gone.
 import fs from "node:fs";
 import path from "node:path";
@@ -13,9 +13,9 @@ const trackFlag = flag("track");
 const slug = args[0];
 const name = args.slice(1).join(" ").trim();
 
-const TRACKS = { dev: "Development", cloud: "Cloud & DevOps", data: "Data & AI", test: "Testing", design: "Design", marketing: "Marketing" };
+const TRACKS = { dev: "Development", cloud: "Cloud & DevOps", data: "Data & AI", test: "Testing", design: "Design" };
 if (!slug || !name || !/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug) || !TRACKS[cat]) {
-  console.error('Usage: npm run course:new -- <slug> "<Name>" [--cat dev|cloud|data|test|design|marketing] [--track "Label"]\n  slug: lowercase words joined by hyphens, e.g. kubernetes-admin');
+  console.error('Usage: npm run course:new -- <slug> "<Name>" [--cat dev|cloud|data|test|design] [--track "Label"]\n  slug: lowercase words joined by hyphens, e.g. kubernetes-admin');
   process.exit(1);
 }
 const track = trackFlag ?? TRACKS[cat];
@@ -53,10 +53,10 @@ const data = {
   },
   glance: {
     title: `How long is the ${name} course?`,
-    lead: `The ${name} course takes **${P("N")} months, about ${P("N")} hours** of live classes and hands-on labs.`,
+    lead: `The ${name} course takes **${P("N")} months, about ${P("N")} hours** of live classes and hands-on labs. Choose the batch that fits your schedule; every batch covers the same syllabus and projects.`,
     batches: [
-      { name: "Duration", duration: `${P("N")} months` },
-      { name: "Hours of learning", duration: `${P("N")} hours` },
+      { name: "Weekday batch", duration: `${P("N")} months`, schedule: ["Monday to Friday", `${P("N")} hours a day`], note: "For freshers or full-time learners" },
+      { name: "Weekend batch", duration: `${P("N")} months`, schedule: ["Saturday and Sunday", `${P("N")} hours a day`], note: "Fits around a full-time job" },
     ],
   },
   whatis: {
